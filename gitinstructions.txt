@@ -1,0 +1,28 @@
+first make the file wanted in terminal. 
+	-ensure you are in the directory you want
+	-make the folder with the 'mkdir' command
+make a file in the folder you want to upload. 
+	-'touch [filename].[filetype]
+ensure you are in the folder you want with 'cd', 'cd ..', 'ls', and 'pwd' commands
+make the git folder
+	- 'git init'
+add the files from the directroy
+	- 'git add [filename]'
+commit the files
+	- 'git commit -m "[comment about what you did]"
+get your github repository and compy remote url
+	- 'git remote add origin [remote repository URL]'
+if working with SSH you do not need to provide user.email or password (after getting your computer's ssh key setup)
+push origin master
+	-'git push -u origin master'
+
+
+to update files (commit) on github you must add the files from the directory again
+	-'git add [filename]'
+then commit
+	- 'git commit -m "comment" '
+then push
+	- 'git push -u origin master'
+check status
+	- 'git status'
+
