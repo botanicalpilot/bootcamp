@@ -1,4 +1,5 @@
-#file saved as madlibs2.property
+#Use user input for madlibs. Make an while loop that takes multiple user inputs. Inputs are split() according to commas and stored in a list. Print random items in each list and ask user if they want to repeat the game. If they don't, break the while loops.
+
 #import random module
 import random
 print("*" * 10)
