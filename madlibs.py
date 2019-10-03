@@ -19,7 +19,7 @@ while True:
     meat = meatitems.split(",")
     frozen = frozenitems.split(",")
 
-    #printf the madlibs statement with random choices from each list above.
+    #print(f) the madlibs statement with random choices from each list above. Do not use concatination for print(f) statements. Below is not the best practice.
     print(f"While going shopping you found" + random.choice(aisle) + " and " + random.choice(meat) + ", but they were out of " + random.choice(frozen))
 
     again = input("Would you like to try again? Type 'y' for yes or 'n' for no. ")
@@ -29,3 +29,9 @@ while True:
 
 print("Thank you for using Shopping List Madlibs!")
 print("*" * 10)
+
+"""
+Questions:
+Do you have to assign the input into a list(lines 18-20) or is there a way to take the user input as a list (lines 13-15)?
+    No, strings are immutable where lists are mutable. We need to be able to randomize the user input.
+"""
