@@ -22,24 +22,22 @@ player2 = [players[1], 3]
 player3 = [players[2], 3]
 pot = int(0)
 
+def wait():
+    ticker = int(0)
+    while ticker < 3:
+        print(".")
+        time.sleep(0.5)
+        ticker += 1
+
 def roll(x):
     if x > 0:
         dice = ['L', 'C', 'R', 'dot', 'dot', 'dot']
         print("rolling the dice")
-        time.sleep(0.5)
-        print(".")
-        time.sleep(0.5)
-        print(".")
-        time.sleep(0.5)
-        print(".")
+        wait()
         diceresult = [random.choice(dice), random.choice(dice), random.choice(dice)]
         print(f"You rolled {diceresult[0]}, {diceresult[1]}, and {diceresult[2]}")
         numberdots = diceresult.count('dot')
-        numberL = diceresult.count('L')
-        numberC = diceresult.count('C')
-        numberR = diceresult.count('R')
-    if numberL > 0:
-        player1[1] -= numberL
-        print(player1[1])
+        LCRresult = [diceresult.count('L'), diceresult.count('C'), diceresult.count('R')]
+        print(LCRresult)
 
 roll(4)
