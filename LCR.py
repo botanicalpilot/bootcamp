@@ -10,18 +10,21 @@ Strategy:
     -each player needs to 'roll' the dice, depending on what side is selected the chips will be exchanged.
     -when only one player has chips left, break while loop using the function(s) and ask if they want to play again.
 
+    how to establish turn order??
+
 
 '''
 import random
 import time
 
 playernames = input("Enter the names of three players, seperated by spaces ")
-players = playernames.split()
-player1 = [players[0], 3]
-player2 = [players[1], 3]
-player3 = [players[2], 3]
-pot = int(0)
+playerslist = playernames.split()
+#python3.6 and on keep dictionaries in order.
+players = {playerslist[0] : 3, playerslist[1] : 3, playerslist[2] : 3 }
+print(players)
+pot = 0
 
+#create a lag to make the game more interactive
 def wait():
     ticker = int(0)
     while ticker < 3:
@@ -29,6 +32,7 @@ def wait():
         time.sleep(0.5)
         ticker += 1
 
+#dice roll for the game
 def roll(x):
     if x > 0:
         dice = ['L', 'C', 'R', 'dot', 'dot', 'dot']
@@ -39,5 +43,11 @@ def roll(x):
         numberdots = diceresult.count('dot')
         LCRresult = [diceresult.count('L'), diceresult.count('C'), diceresult.count('R')]
         print(LCRresult)
+        pot += diceresult.count('C')
+        print(pot)
+
+def turns(roller, playerbefore, playerafter):
+    roll()
+
 
 roll(4)
