@@ -43,9 +43,9 @@ def roll(x):
         numberdots = diceresult.count('dot')
         LCRresult = [diceresult.count('L'), diceresult.count('C'), diceresult.count('R')]
         print(LCRresult)
-        pot += diceresult.count('C')
-        print(pot)
-
+        players[0] -= LCRresult[0]
+        players[0] -= LCRresult[2]
+        
 def turns(roller, playerbefore, playerafter):
     roll()
 
