@@ -14,7 +14,6 @@ def userRock():
         print("The computer used paper. Paper cover rock, you loose!")
     elif botRPS == 'Scissors':
         print("The computer used scissors. Rock breaks scissors, you win!")
-    return
 def userPaper():
     if userRPC != 'paper':
         return
@@ -24,9 +23,8 @@ def userPaper():
         print("You both choose paper, it's a tie")
     elif botRPS == 'Scissors':
         print("The computer used scissors. Scissors cut paper, you loose!")
-    return
 def userScissors():
-    if userRPC != 'paper':
+    if userRPC != 'scissors':
         return
     elif botRPS == 'rock':
         print("The computer used rock. Rock breaks scissors, you loose!")
@@ -34,9 +32,6 @@ def userScissors():
         print("The computer used paper. Scissors cut paper, you win!")
     elif botRPS == 'Scissors':
         print("You both choose scissors, it's a tie!")
-    return
-
-
 def main():
     "Welciome to the computerized Rock, Paper, Scissors Game!"
     userRock()
