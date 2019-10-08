@@ -65,12 +65,13 @@ def conversiontoUnits():
         print(converted)
 
 def main():
+    #gather info from user
     userDistance = input("What distance do you want to convert? Enter your number followed by unit abberviation - 'km', 'm' 'mi', 'ft', 'yd', 'in' (eg. '145 ft'): ").split(" ")
     userValue = int(userDistance[0])
     userUnit = userDistance[1]
     userConvertedUnit = input("What unit do you want to convert to? ")
-
     converted[userConvertedUnit] = None
+    #run user inputs through functions.
     conversionToMeters(userUnit, userValue)
     conversiontoUnits()
     print(f"{userValue} {userUnit} is {converted['finalconversion']} {userConvertedUnit}")
