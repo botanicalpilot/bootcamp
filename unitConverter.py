@@ -12,27 +12,21 @@ def conversionToMeters(userUnit, userValue):
     if userUnit == 'ft':
         toMeters = ft * userValue
         converted['firstConverion'] = toMeters
-        print(converted)
     elif userUnit == 'km':
         toMeters = km * userValue
         converted['firstConverion'] = toMeters
-        print(converted)
     elif userUnit == 'mi':
         toMeters = mi * userValue
         converted['firstConverion'] = toMeters
-        print(converted)
     elif userUnit == 'yd':
         toMeters = yd * userValue
         converted['firstConverion'] = toMeters
-        print(converted)
     elif userUnit == 'in':
         toMeters = inches * userValue
         converted['firstConverion'] = toMeters
-        print(converted)
     elif userUnit == 'm':
         toMeters == UserValue
         converted['firstConverion'] = toMeters
-        print(converted)
     else:
         print('invalid user input')
         return
@@ -42,27 +36,21 @@ def conversiontoUnits():
     if 'ft' in converted:
         result = ft * converted['firstConverion']
         converted['finalconversion'] = result
-        print(converted)
     if 'km' in converted:
-        result = km * converted['firstConverion']
+        result = converted['firstConverion'] / km
         converted['finalconversion'] = result
-        print(converted)
     if 'mi' in converted:
         result = mi * converted['firstConverion']
         converted['finalconversion'] = result
-        print(converted)
     if 'yd' in converted:
         result = yd * converted['firstConverion']
         converted['finalconversion'] = result
-        print(converted)
     if 'in' in converted:
         result = inches * converted['firstConverion']
         converted['finalconversion'] = result
-        print(converted)
     if 'm' in converted:
         result = converted['firstConverion']
         converted['finalconversion'] = result
-        print(converted)
 
 def main():
     #gather info from user
