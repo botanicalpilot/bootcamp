@@ -10,13 +10,13 @@ import string
 
 
 def cipher():
-   letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-   userInput = unicode(input("Enter your string you want deciphered: "), "UTF-8")
-   userRot = int(input("Enter the offset you want for your cipher: "))
-   cipheredInput = letters[userRot:] + letters[:userRot]
-    #make translation table from letters to cipheredInput
-   cipherTable = str.maketrans(letters, cipheredInput)
-   #translate with the cipherTable using the int form the user. 
-   userRot.translate(cipherTable)
- 
-cipher()
+    #list is lowercase,uppercase,digits(0-9)
+    letters = (string.ascii_letters + string.digits)
+    userMessage = input("Enter your string you want deciphered: ")
+    userShift = int(input("Enter the offset you want for your cipher: "))
+    def shift():
+        cipheredInput = letters[userShift:] + letters[:userShift]
+
+#cipher()
+letters = (string.ascii_letters + string.digits)
+print(letters)
