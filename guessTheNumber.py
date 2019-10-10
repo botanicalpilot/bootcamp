@@ -16,6 +16,7 @@ def lowHigh(userGuess, computerN):
         print('That guess is too high! Please try again.')
     else:
         print('That guess is too low! Please try again.')
+    
 
 def userGuess():
     print('Welcome to the Number Guessing Game. Try and guess the computers number in the range of 1-10. If incorrect, you will be prompted to guess again.' )
@@ -27,11 +28,12 @@ def userGuess():
             break
         else:
             lowHigh(userGuess, computerN)
-def storedGuess():
-    pastguesses = list()
-    pastguesses.append(userGuess)
-    
 
+def storedGuess(prevGuess):
+    prevGuess = None
+    if prevGuess == None:
+        break
+    elif prevGuess 
 
 
 userGuess()
