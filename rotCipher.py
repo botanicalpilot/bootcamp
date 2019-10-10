@@ -14,9 +14,15 @@ def cipher():
     letters = (string.ascii_letters + string.digits)
     userMessage = input("Enter your string you want deciphered: ")
     userShift = int(input("Enter the offset you want for your cipher: "))
-    def shift():
-        cipheredInput = letters[userShift:] + letters[:userShift]
+    def shift(userShift):
+        #make a new variable. Use return to call value to caller
+        return letters[userShift:] + letters[:userShift]
 
 #cipher()
 letters = (string.ascii_letters + string.digits)
 print(letters)
+
+
+'''
+I feel like at this point I am researching and working on things above my level. I will finish this code, but first complete the code that I believe I should be doing in another program called 'newCipher.py
+'''
