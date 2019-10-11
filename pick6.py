@@ -15,68 +15,54 @@ order matters, matching several numbers means matching them in a row.
 import random 
 
 cost = []
-winningTicket = []
+
 winnings = []
 userTicket = []
 
 def pick6():
+    winningTicket = []
     for n in range(6):
         winningTicket.append(random.choice(range(1,99)))
-    #print(winningTicket)
+    return winningTicket
 
 def testingLotteryTicket():
     #print(f'winning ticket:{winningTicket}')
     for n in range(100):
         #userTicket = []
         cost.append(2)
-        def makeLotteryTicket():
-            tempTicket = []
-            for n in range(6):
-                tempTicket.append(random.choice(range(1,99)))  
-                userTicket = tempTicket   
-            print(userTicket)
+def makeLotteryTicket():
+    tempTicket = []
+    for n in range(6):
+        tempTicket.append(random.choice(range(1,99)))  
+        userTicket = tempTicket   
+        print(userTicket)
         makeLotteryTicket()
         partialMatch(winningTicket, userTicket)
-
-        ''' 
-        if any(elem in winningTicket for elem in userTicket):
-            print("you got a match!")
-            partialMatch(winningTicket, userTicket)
-            cost.append(2)
-            makeLotteryTicket(userTicket)
-        elif userTicket != winningTicket:
-            cost.append(2)
-            makeLotteryTicket(userTicket)
-            #print("sorry no matches")
-        else:
-            print('error')
-'''
-def partialMatch(winningTicket, userTicket):
-    print(f'winning:{winningTicket}')
-    print(f'user: {userTicket}')
-    if winningTicket[0] == userTicket[0]:
+def partialMatch(a, b):
+    print(f'winning:{a}')
+    print(f'user: {b}')
+    if a[0] == b[0]:
         print("you matched the first number")
         winnings.append(4)
-    elif winningTicket[0:1] == userTicket[0:1]:
+    elif a[0:1] == b[0:1]:
         print("you matched the first two numbers")
         winnings.append(7)
-    elif winningTicket[0:2] == userTicket[0:2]:
+    elif a[0:2] == b[0:2]:
         print("you matched the first three numbers")
         winnings.append(100)
-    elif winningTicket[0:1] == userTicket[0:3]:
+    elif a[0:1] == b[0:3]:
         print("you matched the first four numbers")
         winnings.append(50000)
-    elif winningTicket[0:4] == userTicket[0:4]:
+    elif a[0:4] == b[0:4]:
         print("you matched the first five numbers")
         winnings.append(1000000)
-    elif winningTicket[0:5] == userTicket[0:5]:
+    elif a[0:5] == b[0:5]:
         print("You won the lotto!")
         winnings.append(25000000)
-    elif winningTicket != userTicket:
+    elif a != b:
         print('Sorry no matches')
     else:
         return
-
 def totalCost(cost):
     total = 0
     for n in cost:
@@ -89,9 +75,9 @@ def totalWinnings(winnings):
         winningsEarned += n
     return winningsEarned
 
-pick6()
-testingLotteryTicket()
+print(pick6())
 
 
-print(totalCost(cost))
-print(totalWinnings(winnings))
+
+#print(totalCost(cost))
+#print(totalWinnings(winnings))
