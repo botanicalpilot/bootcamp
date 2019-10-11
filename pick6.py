@@ -17,7 +17,7 @@ import random
 cost = []
 winningTicket = []
 winnings = []
-
+userTicket = []
 
 def pick6():
     for n in range(6):
@@ -25,17 +25,19 @@ def pick6():
     #print(winningTicket)
 
 def testingLotteryTicket():
-    print(f'winning ticket:{winningTicket}')
+    #print(f'winning ticket:{winningTicket}')
     for n in range(100):
-        userTicket = []
-        def makeLotteryTicket(userTicket):
+        #userTicket = []
+        cost.append(2)
+        def makeLotteryTicket():
             tempTicket = []
             for n in range(6):
                 tempTicket.append(random.choice(range(1,99)))  
-            userTicket = tempTicket   
+                userTicket = tempTicket   
             print(userTicket)
-        makeLotteryTicket(userTicket)
+        makeLotteryTicket()
         partialMatch(winningTicket, userTicket)
+
         ''' 
         if any(elem in winningTicket for elem in userTicket):
             print("you got a match!")
@@ -50,6 +52,8 @@ def testingLotteryTicket():
             print('error')
 '''
 def partialMatch(winningTicket, userTicket):
+    print(f'winning:{winningTicket}')
+    print(f'user: {userTicket}')
     if winningTicket[0] == userTicket[0]:
         print("you matched the first number")
         winnings.append(4)
