@@ -3,7 +3,13 @@ def getLists():
     letters = list(userWord)
     return letters
 
-def check_palidrome(x):
+def check_palidrome(wordList):
+    palidrome = wordList[::-1]
+    if palidrome == wordList:
+        return True
 
-    
-print(getLists())
+def main():
+    wordList = getLists()
+    print(check_palidrome(wordList))
+
+main()
