@@ -3,14 +3,20 @@ import random
 
 #evaluate for Aces in userCards, and total
 def aceEval(userCards, total):
+    aCount = userCards.count('A')
     aValue = []
-    if 'A' in userCards and total <= 10:
-        aValue.append(11)
+    if aCount == 1:
+        if total <= 10:
+            aValue.append(11)
+            aValue.append(total)
+        else:
+            aValue.append(1)
+            aValue.append(total)
     else:
-        aValue.append(1)
-    aValue.append(total)
+        aValue.append(2)
     return sum(aValue)
 
+#
 def hitBustedBlackjack(total):
     if total == 21:
         print('Blackjack!')
