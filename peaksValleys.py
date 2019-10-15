@@ -15,20 +15,24 @@ def displayData(indexData):
         star = 'x' * val
         indexValue = index
         print(indexValue, star)
-        print(indexValue, val)
+        #print(indexValue, val)
 
-def peak(indexData):
-  
-        
-#def valleys():
+def peak(data):
+    peaks = []
+    for item in data:
+        if data[x] > data[x+1] and data[x] > data[x-1]:
+            peaks.append(item)
+    return peaks
+    
 
-#def peaksAndValleys():
 def main():
     data = [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8]
     indexData = enumerate(data)
     displayData(indexData)
+    #print(valleys(data))
+    print(peak(data))
 
-#main()
+main()
 
 
 'how can I compare the items in a list or a truple to those in front and being them? and return the value of their index?'
