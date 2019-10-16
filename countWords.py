@@ -16,6 +16,8 @@ def getEditBook():
     contentsLower = contents.lower()
 
     #remove punctuation
+    #create a three argument translation table (x, y, and z). x and y must be equal length strings/characters. 
+    #Characters/strings in x are replaced by characters in y. string.punction is therefore mapped to None. 
     punctuationTable = str.maketrans('','', string.punctuation)
     noPunct = contentsLower.translate(punctuationTable)
 
