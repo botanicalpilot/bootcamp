@@ -39,11 +39,9 @@ def wordCount(words):
         #get item from words, default value is 0. Add one if present. 
         totalCount[item] = totalCount.get(item, 0) +1
     return totalCount
-
-
     
 def main():
-    totals = wordCount(getEditBook())
+    totals = wordCountComp(getEditBook())
     words = list(totals.items())
     words.sort(key=lambda tup: tup[1], reverse=True)  
     for i in range(min(10, len(words))):  
