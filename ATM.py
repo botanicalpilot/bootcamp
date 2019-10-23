@@ -15,7 +15,6 @@ class ATM:
     def deposit(self, amount):
         self.tranasctionHistory.append(f'deposited: {amount}')
         return amount + self.balance
-        
 
     def checkWithdrawal(self):
         if self.balance >= self.amount:
@@ -25,7 +24,6 @@ class ATM:
 
     def withdraw(self, amount):
             self.tranasctionHistory.append(f'withdrew: {amount}')
-            #self.balance. append(- self.amount)
             return self.balance - amount
 
     def transactions(self):
@@ -38,25 +36,27 @@ def main():
     p1.balance = startingBalance
     while True:
         toDo = input("Enter would you like to do. 'Check balance', 'deposit', 'withdraw', or see your history with 'transactions': ").lower()
+
         if toDo =='deposit':
             deposit = int(input('How much would you like to deposit? '))
-            # action = ATM(deposit, startingBalance).deposit()
             p1.balance = p1.deposit(deposit)
             print(p1.balance)
+
         elif toDo == 'withdraw':
             withdraw = int(input('How much would you like to withdraw? '))
             if p1.checkWithdrawal == True:
                 p1.balance = p1.withdraw(withdraw)
-                #action = ATM(withdraw, startingBalance).withdraw()
                 print(p1.balance)
             else:
                 print('insufficient funds')
+
         elif toDo == 'check balance':
-            #action = ATM(0, startingBalance).checkBalance()
             print(p1.balance)
+
         elif toDo == 'transactions':
             action = p1.transactions()
             print(action)
+
         else:
             break
 
