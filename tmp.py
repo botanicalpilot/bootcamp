@@ -1,8 +1,24 @@
-def sum_pairs(ints, s):
-    for item in ints:
-        ints[item] + item for item if 
-	pass
-print(sum_pairs([1, 4, 8, 7, 3, 15], 8))
+def valid_parentheses(string):
+    if string == "":
+        return True
+    listPar = [item for item in string if item == ')' or item == '(']
+    #print(f'Listpar: {listPar}')
+    if listPar.count('(') != listPar.count(')'):
+        return False
+    else:
+        stringPar = ''.join(listPar)
+        #print(f'stringPar: {stringPar}')
+        removeMatch = stringPar.replace('()', '')
+        #print(f'removeMatch: {removeMatch}')
+        if removeMatch == '':
+            return True
+        else:
+            return False
+        
+
+
+print(valid_parentheses("(c(b(a)))(d)"))
+
 
 
 
