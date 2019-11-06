@@ -1,0 +1,43 @@
+h1 {
+    color: #0F2612;
+     align-self: center
+}
+
+h2, h3 {
+    color: #0F2612;
+    align-items: center
+}
+
+p {
+    color: #0F2612;
+    padding: 15px;
+    
+}
+
+img {
+    float: right;
+    flex-wrap: wrap
+
+}
+
+#plant{
+    float: left;
+    size: 200px
+}
+
+body {
+    background-color: #F2E9D8;
+}
+
+q {
+    justify-content: right;
+    color: green
+}
+
+ul {
+    color: #0F2612;
+}
+
+a {
+    color: green;
+}

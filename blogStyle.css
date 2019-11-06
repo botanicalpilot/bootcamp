@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 1
+
+    
+    
+}
+
+.mainCard {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    
+}
+
+.secondaryCard {
+    grid-column-start: 4;
+    grid-column-end: 6; 
+
+}
+
+img {
+    height: 375px;
+    width: 500px;
+    
+}
